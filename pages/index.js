@@ -36,7 +36,7 @@ export default function Home() {
         </Heading>
         <Box>
           <Text
-            display={isVisble}
+            display={isVisible}
             mr={1}
             fontSize=".8rem"
             as="span"
@@ -44,7 +44,7 @@ export default function Home() {
           >
             Overview
           </Text>
-          <Text display={isVisble} mr={5} fontSize=".8rem" as="span">
+          <Text display={isVisible} mr={5} fontSize=".8rem" as="span">
             Tech Specs
           </Text>
           <Button

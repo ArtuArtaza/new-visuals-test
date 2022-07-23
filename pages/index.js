@@ -10,6 +10,7 @@ import Six from "../components/Six/Six";
 import { useScroll, motion, useTransform, useSpring } from "framer-motion";
 
 export default function Home() {
+  const isVisible = useBreakpointValue({ base: "none", lg: "block" });
   const variant = useBreakpointValue({ base: -800, md: -1200 });
   const { scrollY } = useScroll();
   const y = useTransform(scrollY, [0, 10], [50, variant]);
@@ -34,10 +35,16 @@ export default function Home() {
           iPhone 11 Pro
         </Heading>
         <Box>
-          <Text mr={1} fontSize=".8rem" as="span" color="#aaa">
+          <Text
+            display={isVisble}
+            mr={1}
+            fontSize=".8rem"
+            as="span"
+            color="#aaa"
+          >
             Overview
           </Text>
-          <Text mr={5} fontSize=".8rem" as="span">
+          <Text display={isVisble} mr={5} fontSize=".8rem" as="span">
             Tech Specs
           </Text>
           <Button

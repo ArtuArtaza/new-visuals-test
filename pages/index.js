@@ -10,7 +10,7 @@ import Six from "../components/Six/Six";
 import { useScroll, motion, useTransform, useSpring } from "framer-motion";
 
 export default function Home() {
-  const isVisible = useBreakpointValue({ base: "none", lg: "block" });
+  const isVisible = useBreakpointValue({ base: "none", lg: "line" });
   const variant = useBreakpointValue({ base: -800, md: -1200 });
   const { scrollY } = useScroll();
   const y = useTransform(scrollY, [0, 10], [50, variant]);
@@ -20,7 +20,7 @@ export default function Home() {
     bounce: 0,
   });
   return (
-    <Flex minHeight="100vh" bgColor="#111" flexDir="column">
+    <Flex fontFamily="body" minHeight="100vh" bgColor="#111" flexDir="column">
       <NavigationBar />
       <Flex
         p={3}

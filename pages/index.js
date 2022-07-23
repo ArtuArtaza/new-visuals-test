@@ -20,7 +20,13 @@ export default function Home() {
     bounce: 0,
   });
   return (
-    <Flex fontFamily="body" minHeight="100vh" bgColor="#111" flexDir="column">
+    <Flex
+      fontFamily="body"
+      color="white"
+      minHeight="100vh"
+      bgColor="#111"
+      flexDir="column"
+    >
       <NavigationBar />
       <Flex
         p={3}

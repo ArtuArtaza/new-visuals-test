@@ -5,9 +5,9 @@ import Bag from "../Icons/Bag"
 const NavigationBar = () => {
     const isMenuVisible = useBreakpointValue({ base: "none", lg: "flex" })
     return (
-        <Flex bg="#111" as="nav" gap="1rem" alignItems="center" justifyContent="space-between" px="5rem">
-            <Icon boxSize="1.5rem" as={TbMenu} display={isMenuVisible === "flex" ? "none" : "block"} />
-            <Icon boxSize="1.5rem" as={AiFillApple} />
+        <Flex bg="#111" as="nav" gap="1rem" alignItems="center" justifyContent="space-between" px={isMenuVisible === "flex" ? "5rem" : ".7rem"}>
+            <Icon boxSize="1.5rem" as={TbMenu} color="white" display={isMenuVisible === "flex" ? "none" : "block"} />
+            <Icon boxSize="1.5rem" as={AiFillApple} color="white" />
             <Flex display={isMenuVisible} justifyContent="space-evenly" width="100%" >
                 <Link>
                     Mac
@@ -31,8 +31,8 @@ const NavigationBar = () => {
                     Support
                 </Link>
             </Flex>
-            <Icon boxSize="1.5rem" as={AiOutlineSearch} display={isMenuVisible === "flex" ? "flex" : "none"} />
-            <Icon boxSize="1.5rem" as={Bag} />
+            <Icon boxSize="1.5rem" as={AiOutlineSearch} color="white" display={isMenuVisible === "flex" ? "flex" : "none"} />
+            <Icon boxSize="1.5rem" as={Bag} color="white" />
         </Flex>
     )
 }
